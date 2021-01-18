@@ -1,7 +1,11 @@
 const core = require('@actions/core');
 const { promisify } = require('util');
 
-const exec = promisify(require('child_process').exec);
+const process = require('child_process');
+
+const exec = async (command) => {
+  await process.exec(command, { maxBuffer: 1024 * 1024 })
+}
 
 const loginHeroku = async () => {
   const login = core.getInput('email');
