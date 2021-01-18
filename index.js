@@ -1,6 +1,4 @@
 const core = require('@actions/core');
-const { promisify } = require('util');
-
 const process = require('child_process');
 
 const exec = async (command) => {
