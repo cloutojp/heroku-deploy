@@ -1,4 +1,4 @@
-name: 'Deploy to Heroku Using Docker'
+name: 'Deploy to Heroku Using Docker Container'
 author: 'Shinji Kawaguchi'
 description: 'A simple action to build, push and deploy a Docker Image to your Heroku app.'
 inputs:
