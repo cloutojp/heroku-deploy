@@ -2,7 +2,12 @@ const core = require('@actions/core');
 const process = require('child_process');
 
 const exec = async (command) => {
-  await process.exec(command, { maxBuffer: 1024 * 1024 })
+  console.log(`command`)
+
+  await process.exec(command, { maxBuffer: 1024 * 1024 }, (err, stdout, stderr) => {
+    if (err) throw new Error(`stderr: ${stderr}`)
+    console.log(`stdout: ${stdout}`)
+  })
 }
 
 const loginHeroku = async () => {
