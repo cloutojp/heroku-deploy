@@ -40,7 +40,7 @@ module.exports =
 /******/ 	// the startup function
 /******/ 	function startup() {
 /******/ 		// Load entry module and return exports
-/******/ 		return __webpack_require__(54);
+/******/ 		return __webpack_require__(291);
 /******/ 	};
 /******/
 /******/ 	// run startup
@@ -49,14 +49,28 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
-/***/ 54:
+/***/ 87:
+/***/ (function(module) {
+
+module.exports = require("os");
+
+/***/ }),
+
+/***/ 129:
+/***/ (function(module) {
+
+module.exports = require("child_process");
+
+/***/ }),
+
+/***/ 291:
 /***/ (function(__unusedmodule, __unusedexports, __webpack_require__) {
 
-const core = __webpack_require__(798);
+const core = __webpack_require__(872);
 const process = __webpack_require__(129);
 
 const exec = async (command) => {
-  console.log(`command`)
+  console.log(command)
 
   await process.exec(command, { maxBuffer: 1024 * 1024 }, (err, stdout, stderr) => {
     if (err) throw new Error(`stderr: ${stderr}`)
@@ -127,20 +141,6 @@ loginHeroku()
 
 /***/ }),
 
-/***/ 87:
-/***/ (function(module) {
-
-module.exports = require("os");
-
-/***/ }),
-
-/***/ 129:
-/***/ (function(module) {
-
-module.exports = require("child_process");
-
-/***/ }),
-
 /***/ 622:
 /***/ (function(module) {
 
@@ -148,7 +148,7 @@ module.exports = require("path");
 
 /***/ }),
 
-/***/ 770:
+/***/ 738:
 /***/ (function(__unusedmodule, exports, __webpack_require__) {
 
 "use strict";
@@ -247,7 +247,7 @@ function escapeProperty(s) {
 
 /***/ }),
 
-/***/ 798:
+/***/ 872:
 /***/ (function(__unusedmodule, exports, __webpack_require__) {
 
 "use strict";
@@ -269,7 +269,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const command_1 = __webpack_require__(770);
+const command_1 = __webpack_require__(738);
 const os = __importStar(__webpack_require__(87));
 const path = __importStar(__webpack_require__(622));
 /**

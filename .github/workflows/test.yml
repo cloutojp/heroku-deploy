@@ -11,4 +11,4 @@ jobs:
           email: ${{ secrets.HEROKU_EMAIL }}
           api_key: ${{ secrets.HEROKU_API_KEY }}
           app_name: test
-          options: "-f docker/heroku/Dockerfile"
+          options: "-f docker/Dockerfile"
